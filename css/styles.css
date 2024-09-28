@@ -6,7 +6,13 @@
 }
 
 /* Основные стили */
+html, body {
+    height: 100%; /* Задаем высоту 100% */
+}
+
 body {
+    display: flex;
+    flex-direction: column; /* Устанавливаем вертикальную ориентацию */
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     background-color: #121212; /* Темный фон */
@@ -42,6 +48,7 @@ section {
     background: #1e1e1e; /* Темный фон секции */
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1; /* Занимает оставшееся пространство */
 }
 
 /* Форма */
@@ -79,7 +86,4 @@ footer {
     padding: 20px 0;
     background: #007BFF; /* Синий фон подвала */
     color: white; /* Цвет текста в подвале */
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
