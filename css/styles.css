@@ -11,18 +11,25 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    transition: background-color 0.3s ease;
 }
 
 /* Заголовок и навигация */
 header {
-    background: #007BFF; /* Цвет фона */
-    color: white; /* Цвет текста */
+    background: linear-gradient(90deg, #007BFF, #0056b3); /* Градиентный фон */
+    color: white;
     padding: 20px 0;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+    position: sticky; /* Фиксируем вверху при скроллинге */
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -31,17 +38,29 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white; /* Цвет ссылки */
+    color: white;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Цвет ссылки при наведении */
 }
 
 /* Основной контент */
 section {
-    padding: 20px;
+    padding: 40px;
     margin: 20px;
-    background: white; /* Цвет фона секции */
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: white;
+    border-radius: 10px; /* Более сильное закругление углов */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Увеличенная тень */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавные эффекты */
+}
+
+section:hover {
+    transform: translateY(-10px); /* Легкое поднятие секции при наведении */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Увеличенная тень при наведении */
 }
 
 /* Форма */
@@ -52,29 +71,65 @@ form {
 
 form input, form textarea {
     margin: 10px 0;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    transition: border-color 0.3s ease;
 }
 
-/* Кнопка */
+form input:focus, form textarea:focus {
+    border-color: #007BFF; /* Изменение цвета рамки при фокусе */
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
 form button {
-    padding: 10px;
+    padding: 12px;
     border: none;
     border-radius: 5px;
-    background: #007BFF; /* Цвет кнопки */
-    color: white; /* Цвет текста кнопки */
+    background: linear-gradient(90deg, #007BFF, #0056b3); /* Градиент кнопки */
+    color: white;
     cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 form button:hover {
-    background: #0056b3; /* Цвет кнопки при наведении */
+    background: linear-gradient(90deg, #0056b3, #003f7f);
+    transform: translateY(-3px); /* Эффект подъема кнопки при наведении */
 }
 
 /* Подвал */
 footer {
     text-align: center;
     padding: 20px 0;
-    background: #007BFF; /* Цвет фона */
-    color: white; /* Цвет текста */
+    background: #007BFF;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень для подвала */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
+    
+    section {
+        padding: 20px;
+    }
+    
+    form input, form textarea {
+        padding: 10px;
+    }
+    
+    form button {
+        padding: 10px;
+    }
 }
