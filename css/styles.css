@@ -9,21 +9,14 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #2c2c2c; /* Цвет фона для темной темы */
-    color: #f4f4f4; /* Цвет текста */
-}
-
-/* Логотип */
-.logo {
-    max-width: 150px; /* Установите нужный размер логотипа */
-    display: block;
-    margin: 0 auto; /* Центрируем логотип */
+    background-color: #121212; /* Темный фон */
+    color: #e0e0e0; /* Светлый текст */
 }
 
 /* Заголовок и навигация */
 header {
-    background: #007BFF; /* Цвет фона */
-    color: white; /* Цвет текста */
+    background: #1e1e1e; /* Темный фон */
+    color: #e0e0e0; /* Светлый текст */
     padding: 20px 0;
     text-align: center;
 }
@@ -38,7 +31,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white; /* Цвет ссылки */
+    color: #007BFF; /* Цвет ссылок */
     text-decoration: none;
 }
 
@@ -46,28 +39,47 @@ nav ul li a {
 section {
     padding: 20px;
     margin: 20px;
-    background: #3a3a3a; /* Цвет фона секции */
+    background: #1e1e1e; /* Темный фон секции */
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Карточки услуг */
-.card {
-    background: #444; /* Цвет фона карточек */
-    padding: 15px;
+/* Форма */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
     margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    transition: transform 0.3s; /* Анимация при наведении */
+    background-color: #292929; /* Фон полей ввода */
+    color: #e0e0e0; /* Цвет текста */
 }
 
-.card:hover {
-    transform: scale(1.05); /* Увеличение карточки при наведении */
+/* Кнопка */
+form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #007BFF; /* Цвет кнопки */
+    color: white; /* Цвет текста кнопки */
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #0056b3; /* Цвет кнопки при наведении */
 }
 
 /* Подвал */
 footer {
     text-align: center;
     padding: 20px 0;
-    background: #007BFF; /* Цвет фона */
-    color: white; /* Цвет текста */
+    background: #007BFF; /* Синий фон подвала */
+    color: white; /* Цвет текста в подвале */
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
