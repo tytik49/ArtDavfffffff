@@ -1,173 +1,28 @@
-/* Сброс стилей */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
 }
 
-/* Основные стили */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #1a1a1a; /* Глубокий черный фон */
-    color: #f4f4f4; /* Светлый текст */
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: background-color 0.5s ease-in-out;
-}
-
-/* Логотип */
-.logo {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
-
-.logo img {
-    width: 200px;
-    height: 193px;
-    transition: transform 0.3s ease, filter 0.3s ease; /* Анимация увеличения и изменения яркости */
-}
-
-.logo img:hover {
-    transform: scale(1.1); /* Увеличение логотипа при наведении */
-    filter: brightness(1.2); /* Ярче при наведении */
-}
-
-/* Заголовок и навигация */
-header {
-    background: linear-gradient(135deg, #1f1f1f, #000000); /* Градиент для хедера */
-    color: white;
-    padding: 30px;
-    position: relative;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Тень хедера */
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-nav ul li {
-    margin: 0 25px;
-    position: relative;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    letter-spacing: 1px;
-    position: relative;
-    transition: color 0.3s ease, transform 0.3s ease; /* Плавное изменение цвета и перемещение */
-}
-
-nav ul li a:hover {
-    color: #007BFF; /* Подсвечивание текста при наведении */
-    transform: translateY(-5px); /* Плавное перемещение вверх при наведении */
-}
-
-nav ul li a::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #007BFF;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
-}
-
-nav ul li a:hover::before {
-    visibility: visible;
-    transform: scaleX(1);
-}
-
-/* Основной контент */
-section {
-    padding: 40px;
-    margin: 40px 20px;
-    background: #222222; /* Темный фон секции */
+.service-item {
+    background-color: #2b2b2b;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); /* Глубокая тень */
-    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Плавное появление */
-    animation: fadeIn 1.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Плавное появление основного контента */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* При наведении на секцию */
-section:hover {
+.service-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
 }
 
-/* Подвал */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background: #007BFF; /* Синий фон подвала */
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    animation: slideUp 1.2s ease;
+.service-item h2 {
+    margin-bottom: 10px;
+    color: #007BFF;
 }
 
-/* Анимация появления подвала */
-@keyframes slideUp {
-    from {
-        transform: translateY(100%);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
-
-/* Кнопки */
-button {
-    padding: 15px 30px;
-    background: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    letter-spacing: 1px;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-button:hover {
-    background: #0056b3;
-    transform: scale(1.05); /* Увеличение при наведении */
-}
-
-/* Анимация появления кнопок */
-button {
-    animation: buttonAppear 0.7s ease forwards;
-    opacity: 0;
-}
-
-@keyframes buttonAppear {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.service-item p {
+    color: #f4f4f4;
 }
