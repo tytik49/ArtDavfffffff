@@ -9,22 +9,19 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #1a1a1a; /* Тёмный фон */
-    color: #e0e0e0; /* Светлый текст */
+    background-color: #000000; /* Черный фон для всех страниц */
+    color: #ffffff; /* Белый текст */
 }
 
-/* Заголовок и навигация */
-header {
-    background: linear-gradient(90deg, #333, #444); /* Тёмный градиент для заголовка */
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+/* Стиль для главной страницы */
+.homepage {
+    background-color: #d3d3d3; /* Светло-серый фон для главной страницы */
+    color: #333333; /* Темный текст для контраста */
 }
 
-/* Секция с изображением */
 .hero-image {
     width: 100%;
-    height: 100vh; /* Высота 100% от высоты экрана */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,41 +30,71 @@ header {
 .hero-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Картинка будет растянута, сохраняя пропорции */
+    object-fit: cover; /* Картинка растягивается, сохраняя пропорции */
+}
+
+/* Заголовок и навигация */
+header {
+    background: #111111; /* Темно-серый фон для заголовка */
+    color: #ffffff; /* Белый текст */
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff; /* Белые ссылки */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* Золотой цвет при наведении */
 }
 
 /* Основной контент */
 section {
     padding: 40px;
     margin: 20px;
-    background: #333; /* Тёмный фон секций */
+    background: #111111; /* Темный фон секций для всех страниц, кроме главной */
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
-    color: #FFD700; /* Желтый цвет для заголовков */
+    color: #FFD700; /* Золотой цвет для заголовков */
     text-align: center;
 }
 
 .card {
     margin: 20px 0;
-    background: #444;
+    background: #222222;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .card h3 {
     color: #FFD700;
 }
 
+.card p {
+    color: #e0e0e0;
+}
+
 /* Подвал */
 footer {
     text-align: center;
     padding: 20px 0;
-    background: #333; /* Тёмный фон для подвала */
-    color: white;
+    background: #111111; /* Темно-серый фон подвала */
+    color: #ffffff;
     position: fixed;
     bottom: 0;
     left: 0;
