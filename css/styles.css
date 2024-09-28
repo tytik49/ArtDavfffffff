@@ -9,14 +9,18 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4; /* Светло-серый фон */
-    color: #333;
+    background-color: #121212; /* Темный фон */
+    color: #e0e0e0; /* Светлый текст */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /* Заголовок и навигация */
 header {
-    background: #007BFF; /* Цвет фона */
-    color: white; /* Цвет текста */
+    background: #007BFF; /* Синий фон */
+    color: white;
     padding: 20px 40px;
     text-align: center;
 }
@@ -32,7 +36,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white; /* Цвет ссылки */
+    color: white;
     text-decoration: none;
 }
 
@@ -40,18 +44,18 @@ nav ul li a {
 section {
     padding: 20px;
     margin: 20px;
-    background: white; /* Цвет фона секции */
+    background: #1c1c1c; /* Тёмный фон секции */
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 /* Подвал */
 footer {
     text-align: center;
     padding: 20px 0;
-    background: #007BFF; /* Цвет фона */
-    color: white; /* Цвет текста */
-    position: fixed;
+    background: #007BFF;
+    color: white;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
