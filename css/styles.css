@@ -6,38 +6,38 @@
 }
 
 /* Основные стили */
-html, body {
-    height: 100%; /* Задаем высоту 100% */
-}
-
 body {
-    display: flex;
-    flex-direction: column; /* Устанавливаем вертикальную ориентацию */
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #121212; /* Темный фон */
-    color: #e0e0e0; /* Светлый текст */
+    background-color: #f4f4f4; /* Светло-серый фон */
+    color: #333;
 }
 
 /* Заголовок и навигация */
 header {
-    background: #1e1e1e; /* Темный фон */
-    color: #e0e0e0; /* Светлый текст */
-    padding: 20px 0;
-    text-align: center;
+    display: flex; /* Используем flexbox для размещения элементов в одну линию */
+    align-items: center; /* Вертикальное выравнивание по центру */
+    justify-content: space-between; /* Пространство между логотипом и навигацией */
+    background: #007BFF; /* Цвет фона */
+    color: white; /* Цвет текста */
+    padding: 20px 40px; /* Отступы сверху/снизу и слева/справа */
+}
+
+.logo {
+    flex: 0 0 auto; /* Не растягиваем логотип */
 }
 
 nav ul {
     list-style: none;
+    display: flex; /* Размещаем пункты меню в одну линию */
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0 15px; /* Отступы между пунктами меню */
 }
 
 nav ul li a {
-    color: #007BFF; /* Цвет ссылок */
+    color: white; /* Цвет ссылки */
     text-decoration: none;
 }
 
@@ -45,46 +45,15 @@ nav ul li a {
 section {
     padding: 20px;
     margin: 20px;
-    background: #1e1e1e; /* Темный фон секции */
+    background: white; /* Цвет фона секции */
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    flex: 1; /* Занимает оставшееся пространство */
-}
-
-/* Форма */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form input, form textarea {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #292929; /* Фон полей ввода */
-    color: #e0e0e0; /* Цвет текста */
-}
-
-/* Кнопка */
-form button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background: #007BFF; /* Цвет кнопки */
-    color: white; /* Цвет текста кнопки */
-    cursor: pointer;
-}
-
-form button:hover {
-    background: #0056b3; /* Цвет кнопки при наведении */
 }
 
 /* Подвал */
 footer {
     text-align: center;
-    padding: 20px 0; /* Увеличиваем отступ сверху и снизу */
-    margin-top: auto; /* Заставляем подвал оставаться внизу */
-    background: #007BFF; /* Синий фон подвала */
-    color: white; /* Цвет текста в подвале */
+    padding: 20px 0;
+    background: #007BFF; /* Цвет фона */
+    color: white; /* Цвет текста */
 }
