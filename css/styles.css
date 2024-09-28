@@ -15,25 +15,20 @@ body {
 
 /* Заголовок и навигация */
 header {
-    display: flex; /* Используем flexbox для размещения элементов в одну линию */
-    align-items: center; /* Вертикальное выравнивание по центру */
-    justify-content: space-between; /* Пространство между логотипом и навигацией */
     background: #007BFF; /* Цвет фона */
     color: white; /* Цвет текста */
-    padding: 20px 40px; /* Отступы сверху/снизу и слева/справа */
-}
-
-.logo {
-    flex: 0 0 auto; /* Не растягиваем логотип */
+    padding: 20px 40px;
+    text-align: center;
 }
 
 nav ul {
     list-style: none;
-    display: flex; /* Размещаем пункты меню в одну линию */
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    margin: 0 15px; /* Отступы между пунктами меню */
+    margin: 0 15px;
 }
 
 nav ul li a {
@@ -56,4 +51,7 @@ footer {
     padding: 20px 0;
     background: #007BFF; /* Цвет фона */
     color: white; /* Цвет текста */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
