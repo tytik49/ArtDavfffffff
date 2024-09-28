@@ -9,15 +9,34 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4; /* Светло-серый фон для всей страницы */
-    color: #333;
-    overflow-x: hidden; /* Убирает горизонтальную прокрутку */
+    background-color: #000000; /* Черный фон для всех страниц */
+    color: #ffffff; /* Белый текст */
+}
+
+/* Стиль для главной страницы */
+.homepage {
+    background-color: #d3d3d3; /* Светло-серый фон для главной страницы */
+    color: #333333; /* Темный текст для контраста */
+}
+
+.hero-image {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Картинка растягивается, сохраняя пропорции */
 }
 
 /* Заголовок и навигация */
 header {
-    background: #007BFF; /* Цвет фона */
-    color: white; /* Цвет текста */
+    background: #111111; /* Темно-серый фон для заголовка */
+    color: #ffffff; /* Белый текст */
     padding: 20px 0;
     text-align: center;
 }
@@ -32,69 +51,52 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white; /* Цвет ссылки */
+    color: #ffffff; /* Белые ссылки */
     text-decoration: none;
 }
 
-/* Изображение на главной странице */
-.hero-image {
-    text-align: center;
-    margin: 20px 0; /* Отступы сверху и снизу */
+nav ul li a:hover {
+    color: #FFD700; /* Золотой цвет при наведении */
 }
 
 /* Основной контент */
 section {
-    padding: 20px;
+    padding: 40px;
     margin: 20px;
-    background: white; /* Цвет фона секции */
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #111111; /* Темный фон секций для всех страниц, кроме главной */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Карточки услуг и продукции */
+h2 {
+    color: #FFD700; /* Золотой цвет для заголовков */
+    text-align: center;
+}
+
 .card {
-    margin: 10px 0;
-    padding: 15px;
-    background: #e9ecef; /* Цвет фона карточек */
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+    background: #222222;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Форма */
-form {
-    display: flex;
-    flex-direction: column;
+.card h3 {
+    color: #FFD700;
 }
 
-form input,
-form textarea {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Кнопка */
-form button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background: #007BFF; /* Цвет кнопки */
-    color: white; /* Цвет текста кнопки */
-    cursor: pointer;
-}
-
-form button:hover {
-    background: #0056b3; /* Цвет кнопки при наведении */
+.card p {
+    color: #e0e0e0;
 }
 
 /* Подвал */
 footer {
     text-align: center;
     padding: 20px 0;
-    background: #007BFF; /* Цвет фона */
-    color: white; /* Цвет текста */
-    position: relative;
+    background: #111111; /* Темно-серый фон подвала */
+    color: #ffffff;
+    position: fixed;
     bottom: 0;
-    width: 100%; /* Занимает всю ширину */
+    left: 0;
+    width: 100%;
 }
