@@ -1,9 +1,80 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Заголовок и навигация */
+header {
+    background: #007BFF; /* Цвет фона */
+    color: white; /* Цвет текста */
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white; /* Цвет ссылки */
+    text-decoration: none;
+}
+
+/* Основной контент */
+section {
+    padding: 20px;
+    margin: 20px;
+    background: white; /* Цвет фона секции */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Форма */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Кнопка */
+form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #007BFF; /* Цвет кнопки */
+    color: white; /* Цвет текста кнопки */
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #0056b3; /* Цвет кнопки при наведении */
+}
+
+/* Подвал */
 footer {
     text-align: center;
-    padding: 10px 0; /* Отступы сверху и снизу */
-    background: #007BFF; /* Синий цвет фона */
+    padding: 20px 0;
+    background: #007BFF; /* Цвет фона */
     color: white; /* Цвет текста */
-    position: relative; /* Относительное положение */
-    bottom: 0; /* Привязка к низу */
-    width: 100%; /* Полная ширина */
 }
