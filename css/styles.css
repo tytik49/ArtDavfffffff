@@ -1,9 +1,9 @@
 footer {
     text-align: center;
-    padding: 20px 0;
-    background: #007BFF; /* Цвет фона */
+    padding: 10px 0; /* Отступы сверху и снизу */
+    background: #007BFF; /* Синий цвет фона */
     color: white; /* Цвет текста */
-    position: relative; /* Для расположения */
+    position: relative; /* Относительное положение */
     bottom: 0; /* Привязка к низу */
     width: 100%; /* Полная ширина */
 }
