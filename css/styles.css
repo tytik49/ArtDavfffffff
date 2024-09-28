@@ -9,7 +9,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Светло-серый фон для всей страницы */
     color: #333;
     overflow-x: hidden; /* Убирает горизонтальную прокрутку */
 }
@@ -34,6 +34,12 @@ nav ul li {
 nav ul li a {
     color: white; /* Цвет ссылки */
     text-decoration: none;
+}
+
+/* Изображение на главной странице */
+.hero-image {
+    text-align: center;
+    margin: 20px 0; /* Отступы сверху и снизу */
 }
 
 /* Основной контент */
