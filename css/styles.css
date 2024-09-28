@@ -83,7 +83,8 @@ form button:hover {
 /* Подвал */
 footer {
     text-align: center;
-    padding: 20px 0;
+    padding: 20px 0; /* Увеличиваем отступ сверху и снизу */
+    margin-top: auto; /* Заставляем подвал оставаться внизу */
     background: #007BFF; /* Синий фон подвала */
     color: white; /* Цвет текста в подвале */
 }
