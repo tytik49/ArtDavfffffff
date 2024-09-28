@@ -3,40 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArtDav</title>
-    <!-- Подключение CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <title>ArtDav - Сетка и строительные материалы</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="homepage">
     <header>
-        <h1>Добро пожаловать на сайт ArtDav</h1>
+        <h1>ArtDav - Сетка и Строительные Материалы</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">О нас</a></li>
-                <li><a href="services.html">Услуги</a></li>
-                <li><a href="contact.html">Контакты</a></li>
-                <li><a href="blog.html">Блог</a></li>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#services">Наши услуги</a></li>
+                <li><a href="#products">Продукция</a></li>
+                <li><a href="#contact">Контакты</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Секция с изображением -->
-    <section class="hero-image">
-        <img src="hero-image.jpg" alt="Главное изображение">
-    </section>
+    <!-- Раздел с изображением на главной странице -->
+    <div class="hero-image">
+        <img src="setka.jpg" alt="Изображение сетки">
+    </div>
 
-    <!-- Секция с услугами -->
-    <section>
+    <!-- Раздел с услугами -->
+    <section id="services">
         <h2>Наши услуги</h2>
         <div class="card">
-            <h3>Услуга 1</h3>
-            <p>Описание услуги 1.</p>
+            <h3>Продажа строительной сетки</h3>
+            <p>Мы предлагаем широкий выбор строительной сетки различных размеров и материалов для строительства и ограждений.</p>
         </div>
         <div class="card">
-            <h3>Услуга 2</h3>
-            <p>Описание услуги 2.</p>
+            <h3>Монтаж сетки</h3>
+            <p>Профессиональный монтаж сеток для строительных объектов и заборов. Быстро, качественно и надежно.</p>
         </div>
+        <div class="card">
+            <h3>Доставка строительных материалов</h3>
+            <p>Быстрая доставка сетки и других строительных материалов по вашему адресу, в любой регион страны.</p>
+        </div>
+    </section>
+
+    <!-- Раздел с продукцией -->
+    <section id="products">
+        <h2>Наша продукция</h2>
+        <div class="card">
+            <h3>Сетка рабица</h3>
+            <p>Материал: оцинкованная сталь<br>Размер ячейки: 50x50 мм<br>Цена: 200 руб/м²</p>
+        </div>
+        <div class="card">
+            <h3>Сетка сварная</h3>
+            <p>Материал: сталь с полимерным покрытием<br>Размер ячейки: 100x100 мм<br>Цена: 350 руб/м²</p>
+        </div>
+        <div class="card">
+            <h3>Сетка для армирования</h3>
+            <p>Материал: оцинкованная сталь<br>Размер ячейки: 150x150 мм<br>Цена: 450 руб/м²</p>
+        </div>
+    </section>
+
+    <!-- Раздел с контактной информацией -->
+    <section id="contact">
+        <h2>Контакты</h2>
+        <p>Адрес: г. Алматы, ул. Строителей, 25<br>Телефон: +7 (777) 123-45-67<br>Email: info@artdav.kz</p>
+        <form>
+            <input type="text" placeholder="Ваше имя" required>
+            <input type="email" placeholder="Ваш email" required>
+            <textarea placeholder="Ваше сообщение" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
     </section>
 
     <footer>
