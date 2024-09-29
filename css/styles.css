@@ -9,120 +9,102 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #1c1c1c; /* Темный фон */
+    background-color: #000; /* Чёрный фон */
     color: #f4f4f4; /* Светлый текст */
 }
 
 /* Заголовок и навигация */
 header {
-    background: #007BFF; /* Цвет фона */
+    background: #111; /* Темно-серый фон */
     color: white; /* Цвет текста */
     padding: 20px 0;
-    text-align: center;
+    display: flex;
+    align-items: center; /* Центрирование по вертикали */
+}
+
+.logo {
+    margin-left: 20px; /* Отступ слева */
+    animation: bounce 1s infinite; /* Анимация для логотипа */
+}
+
+/* Анимация для логотипа */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+nav {
+    margin-left: auto; /* Выравнивание навигации справа */
 }
 
 nav ul {
     list-style: none;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
     color: white; /* Цвет ссылки */
     text-decoration: none;
-    transition: color 0.3s; /* Анимация при наведении */
+    transition: color 0.3s, transform 0.3s; /* Анимация при наведении */
 }
 
 nav ul li a:hover {
     color: #ffcc00; /* Цвет ссылки при наведении */
+    transform: scale(1.1); /* Увеличение при наведении */
 }
 
 /* Основной контент */
 section {
-    padding: 20px;
+    padding: 40px;
     margin: 20px;
-    background: #2a2a2a; /* Цвет фона секции */
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    background: #222; /* Темный фон секции */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    animation: fadeIn 1s ease-in; /* Анимация появления секции */
 }
 
-/* Логотип */
-.logo {
-    animation: slideIn 1s ease-in-out; /* Анимация для логотипа */
+/* Анимация для секции */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section h2 {
+    margin-bottom: 20px;
+    animation: slideIn 0.5s ease-in-out; /* Анимация для заголовка секции */
 }
 
 @keyframes slideIn {
     from {
-        transform: translateY(-20px);
+        transform: translateX(-100%);
         opacity: 0;
     }
     to {
-        transform: translateY(0);
+        transform: translateX(0);
         opacity: 1;
     }
 }
 
-/* Форма */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form input, form textarea {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Кнопка */
-form button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background: #007BFF; /* Цвет кнопки */
-    color: white; /* Цвет текста кнопки */
-    cursor: pointer;
-}
-
-form button:hover {
-    background: #0056b3; /* Цвет кнопки при наведении */
-}
-
-/* Подвал */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background: #000; /* Цвет фона */
-    color: white; /* Цвет текста */
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-}
-
-/* Анимации для секции */
-section h2 {
-    animation: fadeIn 1s ease-in-out; /* Анимация для заголовков секции */
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Анимация для параграфов */
+/* Параграфы */
 section p {
-    animation: fadeInUp 1s ease-in-out; /* Анимация для параграфов */
+    animation: fadeInUp 0.5s ease-in-out; /* Анимация для параграфов */
 }
 
 @keyframes fadeInUp {
@@ -135,105 +117,12 @@ section p {
         transform: translateY(0);
     }
 }
-/* Сброс стилей */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Основные стили */
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    background-color: #1c1c1c; /* Темный фон */
-    color: #f4f4f4; /* Светлый текст */
-}
-
-/* Заголовок и навигация */
-header {
-    background: #007BFF; /* Цвет фона */
-    color: white; /* Цвет текста */
-    padding: 20px 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white; /* Цвет ссылки */
-    text-decoration: none;
-    transition: color 0.3s; /* Анимация при наведении */
-}
-
-nav ul li a:hover {
-    color: #ffcc00; /* Цвет ссылки при наведении */
-}
-
-/* Основной контент */
-section {
-    padding: 20px;
-    margin: 20px;
-    background: #2a2a2a; /* Цвет фона секции */
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-}
-
-/* Логотип */
-.logo {
-    animation: slideIn 1s ease-in-out; /* Анимация для логотипа */
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Форма */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form input, form textarea {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Кнопка */
-form button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background: #007BFF; /* Цвет кнопки */
-    color: white; /* Цвет текста кнопки */
-    cursor: pointer;
-}
-
-form button:hover {
-    background: #0056b3; /* Цвет кнопки при наведении */
-}
 
 /* Подвал */
 footer {
     text-align: center;
     padding: 20px 0;
-    background: #007BFF; /* Цвет фона */
+    background: #111; /* Темно-серый фон */
     color: white; /* Цвет текста */
     position: fixed;
     bottom: 0;
@@ -241,16 +130,16 @@ footer {
     width: 100%;
 }
 
-/* Анимации для секции */
-section h2 {
-    animation: fadeIn 1s ease-in-out; /* Анимация для заголовков секции */
+/* Анимация для футера */
+footer p {
+    animation: pulse 1s infinite; /* Пульсирующая анимация для текста футера */
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
     }
-    to {
-        opacity: 1;
+    50% {
+        transform: scale(1.05);
     }
 }
