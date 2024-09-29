@@ -1,8 +1,8 @@
 document.getElementById('hamburger').onclick = function() {
-    var overlay = document.getElementById('menuOverlay');
-    overlay.style.display = overlay.style.display === 'block' ? 'none' : 'block';
+    const overlay = document.querySelector('.overlay');
+    overlay.style.display = overlay.style.display === 'flex' ? 'none' : 'flex'; // Переключаем видимость меню
 };
 
-document.getElementById('menuOverlay').onclick = function() {
-    this.style.display = 'none';
+document.querySelector('.overlay').onclick = function() {
+    this.style.display = 'none'; // Скрываем меню при клике вне его
 };
