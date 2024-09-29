@@ -4,6 +4,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     hamburger.addEventListener('click', () => {
         nav.classList.toggle('active'); // Открыть/закрыть меню
-        hamburger.classList.toggle('active'); // Для анимации гамбургера
     });
 });
