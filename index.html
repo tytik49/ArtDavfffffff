@@ -1,50 +1,102 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css"> <!-- Путь к стилям -->
-    <title>ArtDav</title>
-</head>
-<body>
-    <header>
-        <div id="hamburger">&#9776;</div>
-        <nav id="nav">
-            <a href="index.html">Главная</a>
-            <a href="about.html">О нас</a>
-            <a href="services.html">Услуги</a>
-            <a href="blog.html">Блог</a>
-            <a href="contact.html">Контакты</a>
-        </nav>
-    </header>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
 
-    <div class="container fade-in">
-        <section class="section">
-            <h2>Добро пожаловать на ArtDav</h2>
-            <p>Мы предлагаем лучшие услуги для вашего бизнеса.</p>
-        </section>
-        <section class="section">
-            <h2>О нас</h2>
-            <p>Здесь будет информация о вашей компании.</p>
-        </section>
-        <section class="section">
-            <h2>Услуги</h2>
-            <p>Описание предоставляемых услуг.</p>
-        </section>
-        <section class="section">
-            <h2>Блог</h2>
-            <p>Статьи и новости компании.</p>
-        </section>
-        <section class="section">
-            <h2>Контакты</h2>
-            <p>Контактная информация для связи.</p>
-        </section>
-    </div>
+body {
+    background-color: #111; /* Темный фон для всего сайта */
+    color: #fff; /* Белый цвет текста */
+    line-height: 1.6;
+}
 
-    <footer>
-        © 2024 ArtDav. Все права защищены.
-    </footer>
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #222; /* Темный фон для хедера */
+}
 
-    <script src="js/script.js"></script> <!-- Путь к скриптам -->
-</body>
-</html>
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    position: relative;
+}
+
+nav a:hover {
+    color: #1e90ff; /* Цвет при наведении */
+}
+
+#hamburger {
+    cursor: pointer;
+    display: none; /* Скрыть гамбургер на десктопе */
+}
+
+/* Стили для мобильного меню */
+#nav {
+    display: none; /* По умолчанию скрыто */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#nav.active {
+    display: flex; /* Показываем меню, когда есть активный класс */
+}
+
+footer {
+    background-color: #222; /* Темный фон для подвала */
+    color: #fff; /* Белый цвет текста */
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+}
+
+.container {
+    padding: 20px;
+}
+
+.section {
+    margin: 50px 0;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #222; /* Фон секций */
+}
+
+/* Эффект при загрузке */
+.fade-in {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    #hamburger {
+        display: block; /* Показываем гамбургер на мобильных устройствах */
+    }
+
+    nav {
+        display: none; /* Скрыть обычное меню на мобильных устройствах */
+    }
+}
