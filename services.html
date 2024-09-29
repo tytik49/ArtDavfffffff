@@ -4,33 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Услуги - ArtDav</title>
+    <script src="js/script.js" defer></script>
+    <title>Услуги</title>
 </head>
 <body>
     <header>
-        <img src="image/logo.png" alt="Логотип" class="logo">
-        <div class="hamburger" id="hamburger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
+        <img src="image/logo.png" alt="Логотип" id="logo" width="40" height="39">
+        <div id="hamburger">&#9776;</div>
+        <nav id="nav">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О нас</a>
+            <a href="services.html">Услуги</a>
+            <a href="blog.html">Блог</a>
+            <a href="contact.html">Контакты</a>
+        </nav>
     </header>
-    <nav class="nav" id="nav">
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="about.html">О нас</a></li>
-            <li><a href="services.html">Услуги</a></li>
-            <li><a href="blog.html">Блог</a></li>
-            <li><a href="contact.html">Контакты</a></li>
-        </ul>
-    </nav>
-    <section>
-        <h1>Наши услуги</h1>
-        <p>Мы предлагаем широкий спектр услуг, включая веб-разработку, дизайн и консультации.</p>
-    </section>
+
+    <div class="overlay" id="menuOverlay">
+        <div class="menu-content">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О нас</a>
+            <a href="services.html">Услуги</a>
+            <a href="blog.html">Блог</a>
+            <a href="contact.html">Контакты</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <section class="section">
+            <h1>Услуги</h1>
+            <p>Описание всех услуг, которые мы предоставляем.</p>
+        </section>
+    </div>
+
     <footer>
         <p>© 2024 ArtDav. Все права защищены.</p>
     </footer>
-    <script src="js/script.js"></script>
 </body>
 </html>
