@@ -96,6 +96,143 @@ form button:hover {
 footer {
     text-align: center;
     padding: 20px 0;
+    background: #000; /* Цвет фона */
+    color: white; /* Цвет текста */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Анимации для секции */
+section h2 {
+    animation: fadeIn 1s ease-in-out; /* Анимация для заголовков секции */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анимация для параграфов */
+section p {
+    animation: fadeInUp 1s ease-in-out; /* Анимация для параграфов */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #1c1c1c; /* Темный фон */
+    color: #f4f4f4; /* Светлый текст */
+}
+
+/* Заголовок и навигация */
+header {
+    background: #007BFF; /* Цвет фона */
+    color: white; /* Цвет текста */
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white; /* Цвет ссылки */
+    text-decoration: none;
+    transition: color 0.3s; /* Анимация при наведении */
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Цвет ссылки при наведении */
+}
+
+/* Основной контент */
+section {
+    padding: 20px;
+    margin: 20px;
+    background: #2a2a2a; /* Цвет фона секции */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Логотип */
+.logo {
+    animation: slideIn 1s ease-in-out; /* Анимация для логотипа */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Форма */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Кнопка */
+form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #007BFF; /* Цвет кнопки */
+    color: white; /* Цвет текста кнопки */
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #0056b3; /* Цвет кнопки при наведении */
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 20px 0;
     background: #007BFF; /* Цвет фона */
     color: white; /* Цвет текста */
     position: fixed;
