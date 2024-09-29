@@ -1,30 +1,35 @@
-/* Сброс стилей */
+/* Сброс всех стандартных стилей */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-/* Общие стили */
+/* Общие стили для страницы */
 body {
-    font-family: 'Roboto', sans-serif;
+    background-color: #1d1f21;
+    color: #c9cacc;
+    font-size: 16px;
     line-height: 1.6;
-    background-color: #121212;
-    color: #ffffff;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
 }
 
 /* Стили для хедера */
 header {
-    background: #212121;
-    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    background-color: #282a2e;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo img {
-    max-width: 200px;
+    width: 200px;
     height: auto;
 }
 
@@ -35,70 +40,120 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
 }
 
 nav ul li a {
-    color: #007BFF;
+    color: #61afef;
     text-decoration: none;
     font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    background-color: #3a3f44;
 }
 
-/* Стили для секций */
+/* Стили для основного контента */
 section {
-    padding: 20px;
-    margin: 20px;
-    background-color: #1e1e1e;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 1200px;
+    background-color: #282a2e;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 1s ease;
 }
 
-section h1 {
+h1, h2, h3 {
+    color: #61afef;
     margin-bottom: 20px;
-    color: #007BFF;
 }
 
-/* Сетка услуг */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+p {
+    margin-bottom: 20px;
+    color: #bcbcbc;
 }
 
-.service-item {
-    background-color: #2b2b2b;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.service-item h2 {
-    color: #FFD700;
-    margin-bottom: 10px;
-}
-
-.service-item p {
-    color: #e0e0e0;
+/* Анимация для секций */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Стили для футера */
 footer {
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
-    background-color: #212121;
-    color: white;
+    background-color: #282a2e;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+    color: #bcbcbc;
 }
 
-/* Анимация при наведении */
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Стили для сетки услуг */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-item {
+    background-color: #3a3f44;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service-item h2 {
+    color: #e5c07b;
+}
+
+.service-item p {
+    color: #abb2bf;
+}
+
+/* Анимация при наведении на карточки услуг */
 .service-item:hover {
     transform: scale(1.05);
-    transition: transform 0.3s ease;
+    background-color: #4b5258;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    section {
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
 }
