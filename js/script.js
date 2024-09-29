@@ -1,4 +1,4 @@
-document.getElementById('hamburger').addEventListener('click', function() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('active');
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    const navbar = document.getElementById('navbar');
+    navbar.style.display = navbar.style.display === 'block' ? 'none' : 'block';
 });
