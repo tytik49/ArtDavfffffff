@@ -3,34 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
     <title>Блог - ArtDav</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<header>
+    <!-- Логотип -->
     <img id="logo" src="image/logo.png" alt="Логотип">
-    <div id="hamburger">☰</div>
-</header>
 
-<div class="overlay">
-    <div class="menu-content">
-        <a href="index.html#home">Главная</a>
-        <a href="index.html#about">О нас</a>
-        <a href="index.html#services">Услуги</a>
-        <a href="index.html#blog">Блог</a>
-        <a href="index.html#contact">Контакты</a>
+    <!-- Меню-бургер (три полоски) -->
+    <div id="hamburger">&#9776;</div>
+
+    <!-- Меню -->
+    <div class="overlay" id="menu">
+        <div class="menu-content">
+            <a href="index.html#home">Главная</a>
+            <a href="index.html#about">О нас</a>
+            <a href="index.html#services">Услуги</a>
+            <a href="index.html#blog">Блог</a>
+            <a href="index.html#contact">Контакты</a>
+        </div>
     </div>
-</div>
 
-<section id="blog" class="section">
-    <h2>Блог</h2>
-    <p>Следите за нашими последними новостями и статьями о веб-разработке и технологиях.</p>
-</section>
+    <!-- Контент страницы Блог -->
+    <div class="main-content">
+        <div class="text">
+            <h1>Наш блог</h1>
+            <p>Читайте последние новости и статьи, посвященные бизнесу и технологиям. Мы делимся полезными советами и актуальной информацией.</p>
+        </div>
+        <div class="image">
+            <img src="image/blog-image.jpg" alt="Блог">
+        </div>
+    </div>
 
-<footer>
-    <p>© 2024 ArtDav. Все права защищены.</p>
-</footer>
-
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
