@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой сайт</title>
+    <title>Главная</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <img src="image/logo.png" alt="Лого" id="logo">
-            <span id="hamburger">&#9776;</span>
-        </div>
-    </header>
+    <!-- Логотип -->
+    <img id="logo" src="image/logo.png" alt="Логотип">
+    
+    <!-- Меню-бургер -->
+    <div id="hamburger">&#9776;</div>
 
-    <div class="overlay">
+    <!-- Меню -->
+    <div class="overlay" id="menu">
         <div class="menu-content">
             <a href="#home">Главная</a>
             <a href="#about">О нас</a>
@@ -24,35 +24,16 @@
         </div>
     </div>
 
-    <section class="hero" id="home">
-        <h1>Добро пожаловать на ArtDav</h1>
-        <p>Мы предлагаем лучшие услуги для вашего бизнеса.</p>
-        <img src="image/your-photo.jpg" alt="Моё фото" class="hero-image">
-    </section>
-
-    <section id="about">
-        <h2>О нас</h2>
-        <p>Краткая информация о нашей компании.</p>
-    </section>
-
-    <section id="services">
-        <h2>Услуги</h2>
-        <p>Описание предоставляемых услуг.</p>
-    </section>
-
-    <section id="blog">
-        <h2>Блог</h2>
-        <p>Последние новости и статьи.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Контакты</h2>
-        <p>Свяжитесь с нами по любым вопросам.</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 ArtDav. Все права защищены.</p>
-    </footer>
+    <!-- Основной контент -->
+    <div class="main-content">
+        <div class="text">
+            <h1>Добро пожаловать на ArtDav</h1>
+            <p>Мы предлагаем лучшие услуги для вашего бизнеса.</p>
+        </div>
+        <div class="image">
+            <img src="image/sample-image.jpg" alt="Изображение">
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
