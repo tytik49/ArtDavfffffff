@@ -9,44 +9,27 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #000; /* Чёрный фон */
+    background-color: #1e1e1e; /* Темный фон */
     color: #f4f4f4; /* Светлый текст */
 }
 
 /* Заголовок и навигация */
 header {
-    background: #111; /* Темно-серый фон */
+    background: #000; /* Цвет фона */
     color: white; /* Цвет текста */
     padding: 20px 0;
     display: flex;
-    align-items: center; /* Центрирование по вертикали */
+    align-items: center;
 }
 
 .logo {
-    margin-left: 20px; /* Отступ слева */
-    animation: bounce 1s infinite; /* Анимация для логотипа */
-}
-
-/* Анимация для логотипа */
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
-}
-
-nav {
-    margin-left: auto; /* Выравнивание навигации справа */
+    margin-left: 20px; /* Отступ от левого края */
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    margin-left: auto; /* Выровнять вправо */
 }
 
 nav ul li {
@@ -56,90 +39,45 @@ nav ul li {
 nav ul li a {
     color: white; /* Цвет ссылки */
     text-decoration: none;
-    transition: color 0.3s, transform 0.3s; /* Анимация при наведении */
+    transition: color 0.3s; /* Анимация перехода цвета */
 }
 
 nav ul li a:hover {
-    color: #ffcc00; /* Цвет ссылки при наведении */
-    transform: scale(1.1); /* Увеличение при наведении */
+    color: #007BFF; /* Цвет ссылки при наведении */
 }
 
 /* Основной контент */
 section {
-    padding: 40px;
+    padding: 20px;
     margin: 20px;
-    background: #222; /* Темный фон секции */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    animation: fadeIn 1s ease-in; /* Анимация появления секции */
-}
-
-/* Анимация для секции */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-section h2 {
-    margin-bottom: 20px;
-    animation: slideIn 0.5s ease-in-out; /* Анимация для заголовка секции */
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-/* Параграфы */
-section p {
-    animation: fadeInUp 0.5s ease-in-out; /* Анимация для параграфов */
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    background: #2c2c2c; /* Цвет фона секции */
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Подвал */
 footer {
     text-align: center;
     padding: 20px 0;
-    background: #111; /* Темно-серый фон */
-    color: white; /* Цвет текста */
+    background: #000; /* Цвет фона подвала */
+    color: white; /* Цвет текста подвала */
     position: fixed;
-    bottom: 0;
     left: 0;
-    width: 100%;
+    right: 0;
+    bottom: 0; /* Зафиксировать внизу страницы */
 }
 
-/* Анимация для футера */
+/* Анимация для текста */
 footer p {
-    animation: pulse 1s infinite; /* Пульсирующая анимация для текста футера */
+    animation: fadeIn 1s ease-in-out; /* Добавление анимации */
 }
 
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
+/* Определение анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
-    50% {
-        transform: scale(1.05);
+    to {
+        opacity: 1;
     }
 }
