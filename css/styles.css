@@ -11,6 +11,7 @@ body {
     line-height: 1.6;
     background-color: #1e1e1e; /* Темный фон */
     color: #f4f4f4; /* Светлый текст */
+    padding-bottom: 60px; /* Отступ снизу для подвала */
 }
 
 /* Заголовок и навигация */
@@ -24,6 +25,8 @@ header {
 
 .logo {
     margin-left: 20px; /* Отступ от левого края */
+    height: 39px; /* Высота логотипа */
+    width: 40px; /* Ширина логотипа */
 }
 
 nav ul {
