@@ -52,10 +52,14 @@ header {
     margin: 10px 0;
 }
 
-.nav a {
+.nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 16px;
+}
+
+/* Показывать навигацию при добавлении класса active */
+.nav.active {
+    display: block; /* Показывать навигацию, когда она активна */
 }
 
 section {
