@@ -10,7 +10,7 @@
 <body>
     <header>
         <img src="image/logo.png" alt="Логотип" id="logo" width="40" height="39"> <!-- Логотип -->
-        <div id="hamburger">&#9776;</div> <!-- Гамбургер-меню -->
+        <div id="hamburger">&#9776;</div> <!-- Три полоски -->
         <nav id="nav">
             <a href="index.html">Главная</a>
             <a href="about.html">О нас</a>
@@ -19,28 +19,25 @@
             <a href="contact.html">Контакты</a>
         </nav>
     </header>
+
+    <div class="overlay" id="menuOverlay">
+        <div class="menu-content">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О нас</a>
+            <a href="services.html">Услуги</a>
+            <a href="blog.html">Блог</a>
+            <a href="contact.html">Контакты</a>
+        </div>
+    </div>
+
     <div class="container">
         <section class="section">
             <h1>Добро пожаловать на ArtDav</h1>
             <p>Мы предлагаем лучшие услуги для вашего бизнеса.</p>
         </section>
-        <section class="section">
-            <h2>О нас</h2>
-            <p>Информация о компании.</p>
-        </section>
-        <section class="section">
-            <h2>Услуги</h2>
-            <p>Описание услуг, которые мы предлагаем.</p>
-        </section>
-        <section class="section">
-            <h2>Блог</h2>
-            <p>Наши последние новости и статьи.</p>
-        </section>
-        <section class="section">
-            <h2>Контакты</h2>
-            <p>Как с нами связаться.</p>
-        </section>
+        <!-- Другие секции -->
     </div>
+
     <footer>
         <p>© 2024 ArtDav. Все права защищены.</p>
     </footer>
