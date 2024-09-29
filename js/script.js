@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuOverlay = document.getElementById('menuOverlay');
 
     hamburger.addEventListener('click', () => {
-        menuOverlay.classList.toggle('active'); // Открыть/закрыть меню
+        menuOverlay.classList.toggle('active'); // Открываем/закрываем меню
     });
 
-    // Закрыть меню при нажатии вне его области
+    // Закрытие меню при нажатии вне меню
     menuOverlay.addEventListener('click', (e) => {
         if (e.target === menuOverlay) {
             menuOverlay.classList.remove('active');
