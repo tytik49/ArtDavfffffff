@@ -1,14 +1,14 @@
+/* Основные стили */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
     background-color: #111;
     color: #fff;
-    line-height: 1.6;
 }
 
 header {
@@ -17,7 +17,6 @@ header {
     align-items: center;
     padding: 20px;
     background-color: #222;
-    position: relative;
 }
 
 #logo {
@@ -26,27 +25,31 @@ header {
 }
 
 #hamburger {
-    cursor: pointer;
     font-size: 24px;
     color: #fff;
+    cursor: pointer;
 }
 
-/* Прозрачное меню */
+/* Меню (три полоски) */
 .overlay {
+    display: none;
     position: fixed;
     top: 0;
+    left: 0;
     right: 0;
     bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.6); /* Прозрачный фон */
-    display: none;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
     justify-content: center;
     align-items: center;
-    z-index: 10;
+}
+
+.overlay.active {
+    display: flex;
 }
 
 .menu-content {
-    background-color: rgba(255, 255, 255, 0.9); /* Белое полупрозрачное меню */
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -54,22 +57,17 @@ header {
 
 .menu-content a {
     display: block;
-    color: #000;
+    color: #111;
     text-decoration: none;
     margin: 10px 0;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .menu-content a:hover {
     color: #1e90ff;
 }
 
-/* Анимация появления меню */
-.overlay.active {
-    display: flex;
-    animation: fadeIn 0.5s ease;
-}
-
+/* Анимация меню */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -79,13 +77,7 @@ header {
     }
 }
 
-footer {
-    background-color: #222;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
+/* Контейнер */
 .container {
     padding: 20px;
 }
@@ -95,4 +87,11 @@ footer {
     padding: 20px;
     border-radius: 8px;
     background-color: #222;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
 }
