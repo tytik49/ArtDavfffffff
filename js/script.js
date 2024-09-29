@@ -1,4 +1,8 @@
 document.getElementById('menu-toggle').addEventListener('click', function() {
     const navbar = document.getElementById('navbar');
-    navbar.style.display = navbar.style.display === 'block' ? 'none' : 'block';
+    if (navbar.style.display === 'block') {
+        navbar.style.display = 'none';
+    } else {
+        navbar.style.display = 'block';
+    }
 });
