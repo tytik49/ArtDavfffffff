@@ -18,19 +18,10 @@ header {
     color: #fff;
 }
 
-nav {
-    display: none;
-}
-
-nav a {
-    margin: 0 10px;
-    color: #fff;
-    text-decoration: none;
-}
-
 #hamburger {
     font-size: 30px;
     cursor: pointer;
+    color: white;
 }
 
 .overlay {
@@ -44,6 +35,11 @@ nav a {
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    transition: all 0.3s ease; /* Плавное появление */
+}
+
+.overlay.active {
+    display: flex;
 }
 
 .overlay .menu-content {
@@ -56,6 +52,11 @@ nav a {
     color: #fff;
     margin: 20px 0;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+.overlay .menu-content a:hover {
+    color: #f0f0f0; /* Изменение цвета при наведении */
 }
 
 .container {
