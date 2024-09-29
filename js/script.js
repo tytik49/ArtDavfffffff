@@ -1,8 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
-    const nav = document.getElementById('nav');
+    const menuOverlay = document.getElementById('menuOverlay');
 
     hamburger.addEventListener('click', () => {
-        nav.classList.toggle('active'); // Открыть/закрыть меню
+        menuOverlay.classList.toggle('active'); // Открыть/закрыть меню
+    });
+
+    // Закрыть меню при нажатии вне его области
+    menuOverlay.addEventListener('click', (e) => {
+        if (e.target === menuOverlay) {
+            menuOverlay.classList.remove('active');
+        }
     });
 });
