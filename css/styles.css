@@ -1,17 +1,25 @@
-body {
-    font-family: Arial, sans-serif;
+/* Сброс стандартных стилей */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
+/* Основные стили для body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #000; /* Черный фон */
+    color: #fff; /* Белый текст */
+}
+
+/* Стили для шапки */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000;
-    color: #fff;
     padding: 10px 20px;
+    background-color: #111; /* Темный фон для шапки */
 }
 
 #logo {
@@ -19,55 +27,78 @@ header {
     height: 39px;
 }
 
+/* Стили для меню */
 #hamburger {
     cursor: pointer;
-    font-size: 24px;
+    font-size: 30px; /* Размер три полоски */
 }
 
+/* Стили для наложения меню */
 .overlay {
-    display: none; /* Скрыть меню по умолчанию */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8); /* Полупрозрачный черный фон */
+    display: none; /* Скрыто по умолчанию */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* На переднем плане */
 }
 
+/* Стили для контента меню */
 .menu-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #fff;
-    border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
 .menu-content a {
     display: block;
-    color: #333;
     margin: 10px 0;
+    color: #fff; /* Белый текст для ссылок */
     text-decoration: none;
+    font-size: 24px; /* Размер текста ссылок */
 }
 
-.container {
-    padding: 20px;
-}
-
+/* Стили для секций */
 .section {
-    margin: 40px 0;
     padding: 20px;
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Стили для изображения */
+.main-image {
+    width: 1792px; /* Ширина изображения */
+    height: 1024px; /* Высота изображения */
+    margin-top: 20px; /* Отступ сверху */
+    border-radius: 5px; /* Закругление углов */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Тень для эффекта */
+    display: block; /* Чтобы изображение отображалось как блочный элемент */
+    margin-left: auto; /* Центрирование по горизонтали */
+    margin-right: auto; /* Центрирование по горизонтали */
+}
+
+/* Стили для подвала */
 footer {
     text-align: center;
-    padding: 10px;
-    background-color: #000;
-    color: #fff;
+    padding: 10px 0;
+    background-color: #111; /* Темный фон для подвала */
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in; /* Анимация появления */
 }
