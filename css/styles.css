@@ -12,17 +12,17 @@ body {
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 100px; /* Изменение размера логотипа */
+    width: 100px; /* Размер логотипа */
     height: auto;
 }
 
 /* Стили для меню-бургера (три полоски) */
 #hamburger {
-    font-size: 36px; /* Увеличение размера трех полосок */
+    font-size: 36px; /* Размер три полосок */
     cursor: pointer;
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 20px; /* Расположение в правом верхнем углу */
     z-index: 2;
 }
 
@@ -67,22 +67,6 @@ body {
     color: #ff5722;
 }
 
-/* Анимации для меню и текста */
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-h1, p {
-    animation: slideDown 1s ease-out;
-}
-
 /* Стили для текста и изображения на главной странице */
 .main-content {
     display: flex;
@@ -93,7 +77,6 @@ h1, p {
 
 .main-content .text {
     flex-basis: 50%;
-    animation: slideDown 1s ease-out;
 }
 
 .main-content .image {
