@@ -1,42 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой Сайт</title>
+    <title>Мой сайт</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <header>
+        <div class="header-container">
+            <img src="image/logo.png" alt="Лого" id="logo">
+            <span id="hamburger">&#9776;</span>
+        </div>
+    </header>
 
-<header>
-    <div class="container">
-        <img src="image/logo.png" alt="Лого" id="logo">
-        <span id="hamburger">&#9776;</span>
+    <div class="overlay">
+        <div class="menu-content">
+            <a href="#home">Главная</a>
+            <a href="#about">О нас</a>
+            <a href="#services">Услуги</a>
+            <a href="#blog">Блог</a>
+            <a href="#contact">Контакты</a>
+        </div>
     </div>
-</header>
 
-<div class="overlay">
-    <div class="menu-content">
-        <a href="#">Главная</a>
-        <a href="#">О нас</a>
-        <a href="#">Контакты</a>
-    </div>
-</div>
+    <section class="hero" id="home">
+        <h1>Добро пожаловать на ArtDav</h1>
+        <p>Мы предлагаем лучшие услуги для вашего бизнеса.</p>
+        <img src="image/your-photo.jpg" alt="Моё фото" class="hero-image">
+    </section>
 
-<section class="hero">
-    <h1>Добро пожаловать на мой сайт</h1>
-    <img src="image/your-photo.jpg" alt="Моё фото" class="hero-image">
-</section>
+    <section id="about">
+        <h2>О нас</h2>
+        <p>Краткая информация о нашей компании.</p>
+    </section>
 
-<section class="section">
-    <p>Здесь будет основной контент.</p>
-</section>
+    <section id="services">
+        <h2>Услуги</h2>
+        <p>Описание предоставляемых услуг.</p>
+    </section>
 
-<footer>
-    <p>Мой сайт &copy; 2024</p>
-</footer>
+    <section id="blog">
+        <h2>Блог</h2>
+        <p>Последние новости и статьи.</p>
+    </section>
 
-<script src="js/script.js"></script>
+    <section id="contact">
+        <h2>Контакты</h2>
+        <p>Свяжитесь с нами по любым вопросам.</p>
+    </section>
 
+    <footer>
+        <p>&copy; 2024 ArtDav. Все права защищены.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
