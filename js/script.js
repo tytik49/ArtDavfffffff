@@ -1,15 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.getElementById('hamburger');
-    const menuOverlay = document.getElementById('menuOverlay');
+document.getElementById("hamburger").addEventListener("click", function() {
+    document.getElementById("menuOverlay").style.display = "flex";
+});
 
-    hamburger.addEventListener('click', () => {
-        menuOverlay.classList.toggle('active'); // Открываем/закрываем меню
-    });
-
-    // Закрытие меню при нажатии вне меню
-    menuOverlay.addEventListener('click', (e) => {
-        if (e.target === menuOverlay) {
-            menuOverlay.classList.remove('active');
-        }
-    });
+document.getElementById("menuOverlay").addEventListener("click", function() {
+    this.style.display = "none";
 });
