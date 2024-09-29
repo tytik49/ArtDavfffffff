@@ -6,84 +6,67 @@
 }
 
 body {
-    background-color: #111; /* Темный фон для всего сайта */
-    color: #fff; /* Белый цвет текста */
+    background-color: #111;
+    color: #fff;
     line-height: 1.6;
 }
 
 header {
     display: flex;
-    justify-content: space-between; /* Расположение логотипа и меню по краям */
+    justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #222; /* Темный фон для хедера */
-}
-
-#logo {
-    width: 40px; /* Ширина логотипа */
-    height: 39px; /* Высота логотипа */
-}
-
-nav {
-    display: flex;
-    align-items: center;
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
+    background-color: #222;
     position: relative;
 }
 
-nav a:hover {
-    color: #1e90ff; /* Цвет при наведении */
+#logo {
+    width: 40px;
+    height: 39px;
 }
 
 #hamburger {
     cursor: pointer;
-    display: none; /* Скрыть гамбургер на десктопе */
-    font-size: 24px; /* Размер иконки гамбургера */
+    font-size: 24px;
+    color: #fff;
 }
 
-/* Стили для мобильного меню */
-#nav {
-    display: none; /* По умолчанию скрыто */
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: #222;
+/* Прозрачное меню */
+.overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6); /* Прозрачный фон */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.menu-content {
+    background-color: rgba(255, 255, 255, 0.9); /* Белое полупрозрачное меню */
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-#nav.active {
-    display: flex; /* Показываем меню, когда есть активный класс */
-}
-
-footer {
-    background-color: #222; /* Темный фон для подвала */
-    color: #fff; /* Белый цвет текста */
+    border-radius: 10px;
     text-align: center;
-    padding: 20px 0;
-    position: relative;
 }
 
-.container {
-    padding: 20px;
+.menu-content a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    margin: 10px 0;
+    font-size: 20px;
 }
 
-.section {
-    margin: 50px 0;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #222; /* Фон секций */
+.menu-content a:hover {
+    color: #1e90ff;
 }
 
-/* Эффект при загрузке */
-.fade-in {
+/* Анимация появления меню */
+.overlay.active {
+    display: flex;
     animation: fadeIn 0.5s ease;
 }
 
@@ -96,13 +79,20 @@ footer {
     }
 }
 
-/* Адаптивность для мобильных устройств */
-@media (max-width: 768px) {
-    #hamburger {
-        display: block; /* Показываем гамбургер на мобильных устройствах */
-    }
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
 
-    nav {
-        display: none; /* Скрыть обычное меню на мобильных устройствах */
-    }
+.container {
+    padding: 20px;
+}
+
+.section {
+    margin: 50px 0;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #222;
 }
