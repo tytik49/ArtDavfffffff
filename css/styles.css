@@ -2,107 +2,103 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212;
-    color: #fff;
+    background-color: #111; /* Темный фон для всего сайта */
+    color: #fff; /* Белый цвет текста */
     line-height: 1.6;
 }
 
 header {
-    background-color: #000;
-    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
-    position: relative;
+    background-color: #222; /* Темный фон для хедера */
+}
+
+nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    transition: background-color 0.3s ease;
 }
 
-.logo {
-    width: 40px;
-    height: 39px;
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    position: relative;
 }
 
-.hamburger {
+nav a:hover {
+    color: #1e90ff; /* Цвет текста при наведении */
+    transition: color 0.3s; /* Анимация цвета */
+}
+
+#hamburger {
     cursor: pointer;
-    display: flex;
+    display: none; /* Скрыть гамбургер на десктопе */
+}
+
+/* Стили для мобильного меню */
+#nav {
+    display: none; /* По умолчанию скрыто */
     flex-direction: column;
-}
-
-.hamburger .bar {
-    height: 4px;
-    width: 25px;
-    background-color: #fff;
-    margin: 3px 0;
-    transition: all 0.3s ease;
-}
-
-.nav {
-    display: none; /* Скрываем навигацию по умолчанию */
     position: absolute;
-    top: 70px;
+    top: 60px;
     right: 20px;
-    background-color: #333;
+    background-color: #222;
+    padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
 }
 
-.nav ul {
-    list-style: none;
-    padding: 10px 0;
+#nav.active {
+    display: flex; /* Показываем меню, когда есть активный класс */
 }
 
-.nav ul li {
-    text-align: center;
-}
-
-.nav a {
-    display: block;
-    padding: 10px 15px;
-    color: #fff;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.nav a:hover {
-    background-color: #444;
-}
-
-main {
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 20px;
-    padding: 20px;
-    background: #1e1e1e;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+#nav a {
+    margin: 10px 0;
+    transition: all 0.3s ease; /* Анимация для ссылки */
 }
 
 footer {
-    background-color: #000;
-    color: #fff;
+    background-color: #222; /* Темный фон для подвала */
+    color: #fff; /* Белый цвет текста */
     text-align: center;
-    padding: 15px 0;
-    position: relative;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-.footer-content {
-    margin: 0;
+.container {
+    padding: 20px;
 }
 
-/* Анимация для навигационного меню */
-.nav.active {
-    display: block; /* Показываем меню */
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    #hamburger {
+        display: block; /* Показываем гамбургер на мобильных устройствах */
+    }
+
+    nav {
+        display: none; /* Скрыть обычное меню на мобильных устройствах */
+    }
+}
+
+/* Эффект при загрузке */
+.fade-in {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
