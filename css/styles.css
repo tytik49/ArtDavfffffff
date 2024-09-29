@@ -17,12 +17,11 @@ header {
     align-items: center;
     padding: 20px;
     background-color: #222; /* Темный фон для хедера */
-    position: relative; /* Для позиционирования гамбургера */
-    transition: background-color 0.3s; /* Анимация фона хедера */
 }
 
-header:hover {
-    background-color: #333; /* Изменение фона при наведении */
+#logo {
+    width: 40px; /* Ширина логотипа */
+    height: 39px; /* Высота логотипа */
 }
 
 nav {
@@ -37,25 +36,14 @@ nav a {
     position: relative;
 }
 
-nav a::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -5px;
-    width: 0;
-    height: 2px;
-    background: #1e90ff;
-    transition: width 0.3s ease, left 0.3s ease;
-}
-
-nav a:hover::after {
-    width: 100%;
-    left: 0;
+nav a:hover {
+    color: #1e90ff; /* Цвет при наведении */
 }
 
 #hamburger {
     cursor: pointer;
     display: none; /* Скрыть гамбургер на десктопе */
+    font-size: 24px; /* Размер иконки гамбургера */
 }
 
 /* Стили для мобильного меню */
@@ -69,16 +57,10 @@ nav a:hover::after {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
 }
 
 #nav.active {
     display: flex; /* Показываем меню, когда есть активный класс */
-}
-
-#nav a {
-    margin: 10px 0;
-    transition: all 0.3s ease; /* Анимация для ссылки */
 }
 
 footer {
@@ -86,24 +68,18 @@ footer {
     color: #fff; /* Белый цвет текста */
     text-align: center;
     padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    position: relative;
 }
 
 .container {
     padding: 20px;
 }
 
-/* Адаптивность для мобильных устройств */
-@media (max-width: 768px) {
-    #hamburger {
-        display: block; /* Показываем гамбургер на мобильных устройствах */
-    }
-
-    nav {
-        display: none; /* Скрыть обычное меню на мобильных устройствах */
-    }
+.section {
+    margin: 50px 0;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #222; /* Фон секций */
 }
 
 /* Эффект при загрузке */
@@ -120,22 +96,13 @@ footer {
     }
 }
 
-/* Дополнительные стили для секций */
-.section {
-    margin: 50px 0;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #222; /* Фон секций */
-    transition: transform 0.3s, box-shadow 0.3s; /* Анимация при наведении */
-}
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    #hamburger {
+        display: block; /* Показываем гамбургер на мобильных устройствах */
+    }
 
-.section:hover {
-    transform: translateY(-5px); /* Поднятие секции при наведении */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Тень при наведении */
-}
-
-/* Стили для заголовков секций */
-.section h2 {
-    margin-bottom: 15px;
-    color: #1e90ff; /* Синий цвет заголовка */
+    nav {
+        display: none; /* Скрыть обычное меню на мобильных устройствах */
+    }
 }
