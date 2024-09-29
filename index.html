@@ -3,37 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная - ArtDav</title>
+    <title>ArtDav - Металлические сетки</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Логотип -->
-    <img id="logo" src="image/logo.png" alt="Логотип">
-
-    <!-- Меню-бургер (три полоски) -->
-    <div id="hamburger">&#9776;</div>
-
-    <!-- Меню -->
-    <div class="overlay" id="menu">
-        <div class="menu-content">
-            <a href="#home">Главная</a>
-            <a href="#about">О нас</a>
-            <a href="#services">Услуги</a>
-            <a href="#blog">Блог</a>
-            <a href="#contact">Контакты</a>
+    <header>
+        <div class="logo">
+            <img src="image/logo.png" alt="Логотип ArtDav">
         </div>
-    </div>
+        <div class="menu-toggle" id="menu-toggle">☰</div>
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#blog">Блог</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Основной контент -->
-    <div class="main-content">
-        <div class="text">
+    <main>
+        <section id="home" class="hero">
             <h1>Добро пожаловать на ArtDav</h1>
             <p>Мы предлагаем лучшие услуги для вашего бизнеса.</p>
-        </div>
-        <div class="image">
-            <img src="image/sample-image.jpg" alt="Изображение">
-        </div>
-    </div>
+            <img src="image/your-image.jpg" alt="Металлические сетки" class="hero-image">
+        </section>
+
+        <section id="about">
+            <h2>О нас</h2>
+            <p>Мы специализируемся на производстве и продаже металлических сеток.</p>
+        </section>
+
+        <section id="services">
+            <h2>Услуги</h2>
+            <p>Мы предлагаем широкий спектр услуг в области обработки и продажи металлических сеток.</p>
+        </section>
+
+        <section id="blog">
+            <h2>Блог</h2>
+            <p>Читайте наши статьи о новинках и советах по использованию металлических сеток.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Контакты</h2>
+            <p>Свяжитесь с нами для получения дополнительной информации.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 ArtDav. Все права защищены.</p>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
