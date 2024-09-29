@@ -1,81 +1,73 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
+    background-color: #000;
     color: #fff;
+    padding: 10px 20px;
+}
+
+#logo {
+    width: 40px;
+    height: 39px;
 }
 
 #hamburger {
-    font-size: 30px;
     cursor: pointer;
-    color: white;
+    font-size: 24px;
 }
 
 .overlay {
+    display: none; /* Скрыть меню по умолчанию */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон */
-    display: none;
-    justify-content: center;
-    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
     z-index: 1000;
-    transition: all 0.3s ease; /* Плавное появление */
 }
 
-.overlay.active {
-    display: flex;
+.menu-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.overlay .menu-content {
-    text-align: center;
-}
-
-.overlay .menu-content a {
+.menu-content a {
     display: block;
-    font-size: 30px;
-    color: #fff;
-    margin: 20px 0;
+    color: #333;
+    margin: 10px 0;
     text-decoration: none;
-    transition: color 0.3s;
-}
-
-.overlay .menu-content a:hover {
-    color: #f0f0f0; /* Изменение цвета при наведении */
 }
 
 .container {
-    max-width: 1100px;
-    margin: 50px auto;
     padding: 20px;
 }
 
-.section h1 {
-    font-size: 40px;
-    margin-bottom: 20px;
+.section {
+    margin: 40px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
+    background-color: #000;
     color: #fff;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
 }
