@@ -8,36 +8,34 @@
 /* Основные стили */
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    background-color: #121212; /* Темный фон для всей страницы */
-    color: #ffffff; /* Белый цвет текста */
+    background-color: #f4f4f4;
+    color: #333;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    position: relative;
+    padding-bottom: 100px; /* Отступ под футер */
 }
 
-/* Заголовок и навигация */
 header {
-    background: #1f1f1f; /* Темно-серый фон для хедера */
+    background: #007BFF;
     color: white;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Тень для хедера */
+    padding: 10px;
     position: relative;
-    z-index: 100;
 }
 
 .logo img {
+    width: 40px;
+    height: 39px;
     display: block;
     margin-left: 20px;
-    margin-top: 10px;
-    width: 40px; /* Ширина логотипа */
-    height: 39px; /* Высота логотипа */
-    float: left; /* Логотип слева */
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 nav ul {
     list-style: none;
+    text-align: right;
+    margin-right: 20px;
 }
 
 nav ul li {
@@ -48,74 +46,23 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
 }
 
-nav ul li a:hover {
-    color: #007BFF; /* Синий цвет при наведении */
-    transition: color 0.3s ease-in-out; /* Плавная анимация */
-}
-
-/* Основной контент */
 section {
-    padding: 40px;
+    padding: 20px;
     margin: 20px;
-    background: #1c1c1c; /* Темный фон для секций */
+    background: white;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    flex-grow: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Кнопки */
-button {
-    background-color: #007BFF; /* Синяя кнопка */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3; /* Темно-синяя кнопка при наведении */
-    transition: background-color 0.3s ease-in-out; /* Плавная анимация */
-}
-
-/* Подвал */
+/* Стили для футера */
 footer {
-    text-align: center;
-    padding: 20px;
-    background: #1f1f1f; /* Темно-серый фон для подвала */
-    color: white;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.footer-content {
-    padding: 20px;
-    background: #007BFF; /* Синий фон для текста копирайта */
-    color: white;
     position: fixed;
-    left: 0;
     bottom: 0;
     width: 100%;
-}
-
-.footer-content p {
-    margin: 0;
-}
-
-/* Анимации */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-body {
-    animation: fadeIn 1s ease-in-out; /* Анимация появления страницы */
-}
-
-section {
-    animation: fadeIn 0.5s ease-in-out; /* Анимация появления секции */
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 10px;
 }
