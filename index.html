@@ -3,61 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
     <title>ArtDav</title>
 </head>
 <body>
-    <header>
-        <img src="image/logo.png" alt="Логотип" id="logo" width="40" height="39">
-        <div id="hamburger">&#9776;</div> <!-- Три полоски для меню -->
-    </header>
 
-    <div class="overlay" id="menuOverlay">
-        <div class="menu-content">
-            <a href="#home">Главная</a>
-            <a href="#about">О нас</a>
-            <a href="#services">Услуги</a>
-            <a href="#blog">Блог</a>
-            <a href="#contact">Контакты</a>
-        </div>
+<header>
+    <img id="logo" src="image/logo.png" alt="Логотип">
+    <div id="hamburger">☰</div>
+</header>
+
+<div class="overlay">
+    <div class="menu-content">
+        <a href="#home">Главная</a>
+        <a href="#about">О нас</a>
+        <a href="#services">Услуги</a>
+        <a href="#blog">Блог</a>
+        <a href="#contact">Контакты</a>
     </div>
+</div>
 
-    <div class="container">
-        <!-- Раздел Главная -->
-        <section id="home" class="section">
-            <h1>Добро пожаловать на ArtDav</h1>
-            <p>Мы предлагаем лучшие услуги для вашего бизнеса.</p>
-            <img src="image/your-image.png" alt="Описание картинки" class="main-image"> <!-- Замените your-image.png на имя вашей картинки -->
-        </section>
-
-        <!-- Раздел О нас -->
-        <section id="about" class="section">
-            <h1>О нас</h1>
-            <p>Здесь будет информация о нашей компании.</p>
-        </section>
-
-        <!-- Раздел Услуги -->
-        <section id="services" class="section">
-            <h1>Услуги</h1>
-            <p>Мы предлагаем следующие услуги для вашего бизнеса.</p>
-        </section>
-
-        <!-- Раздел Блог -->
-        <section id="blog" class="section">
-            <h1>Блог</h1>
-            <p>Здесь вы найдете последние новости и статьи.</p>
-        </section>
-
-        <!-- Раздел Контакты -->
-        <section id="contact" class="section">
-            <h1>Контакты</h1>
-            <p>Свяжитесь с нами по следующим каналам.</p>
-        </section>
+<section class="section">
+    <div class="text">
+        <h1>Добро пожаловать на ArtDav</h1>
+        <p>Мы предлагаем лучшие услуги для вашего бизнеса.</p>
     </div>
+    <img class="main-image" src="image/your-image.png" alt="Ваше изображение">
+</section>
 
-    <footer>
-        <p>© 2024 ArtDav. Все права защищены.</p>
-    </footer>
+<footer>
+    <p>© 2024 ArtDav. Все права защищены.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
