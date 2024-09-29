@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-color: #f0f0f0;
 }
 
 header {
@@ -15,7 +16,7 @@ header {
 }
 
 #logo {
-    width: 150px; /* Измените размер логотипа по необходимости */
+    width: 150px;
 }
 
 #hamburger {
@@ -30,8 +31,9 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 1;
+    transition: all 0.3s ease;
 }
 
 .menu-content {
@@ -50,24 +52,41 @@ header {
     color: #333;
     text-decoration: none;
     margin: 10px 0;
+    transition: color 0.3s;
+}
+
+.menu-content a:hover {
+    color: #007BFF;
 }
 
 .hero {
     text-align: center;
     padding: 50px 20px;
-    background-color: #f4f4f4;
+    background-color: #007BFF;
+    color: white;
+}
+
+.hero h1 {
+    animation: fadeIn 1s;
 }
 
 .hero-image {
-    width: 875px; /* Новые размеры */
-    height: 500px; /* Новые размеры */
-    float: right;
-    margin-left: 20px;
+    width: 100%;
+    max-width: 875px;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+    transition: transform 0.5s;
+}
+
+.hero-image:hover {
+    transform: scale(1.05);
 }
 
 .section {
     padding: 40px 20px;
     border-bottom: 1px solid #ccc;
+    background-color: white;
 }
 
 footer {
@@ -79,9 +98,18 @@ footer {
 
 @media (max-width: 768px) {
     .hero-image {
-        width: 100%; /* Мобильные размеры */
+        width: 100%;
         height: auto;
         float: none;
         margin: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
