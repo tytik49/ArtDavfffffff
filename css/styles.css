@@ -1,97 +1,79 @@
-/* Основные стили */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #111;
-    color: #fff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #222;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
 }
 
-#logo {
-    width: 40px;
-    height: 39px;
+nav {
+    display: none;
+}
+
+nav a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
 }
 
 #hamburger {
-    font-size: 24px;
-    color: #fff;
+    font-size: 30px;
     cursor: pointer;
 }
 
-/* Меню (три полоски) */
 .overlay {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
     justify-content: center;
     align-items: center;
 }
 
-.overlay.active {
-    display: flex;
-}
-
-.menu-content {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 10px;
+.overlay .menu-content {
     text-align: center;
 }
 
-.menu-content a {
+.overlay .menu-content a {
     display: block;
-    color: #111;
+    font-size: 30px;
+    color: #fff;
+    margin: 20px 0;
     text-decoration: none;
-    margin: 10px 0;
-    font-size: 18px;
 }
 
-.menu-content a:hover {
-    color: #1e90ff;
-}
-
-/* Анимация меню */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Контейнер */
 .container {
+    max-width: 1100px;
+    margin: 50px auto;
     padding: 20px;
 }
 
-.section {
-    margin: 50px 0;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #222;
+.section h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
 }
 
 footer {
-    background-color: #222;
-    color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
