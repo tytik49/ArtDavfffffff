@@ -1,4 +1,4 @@
-// Анимация для меню
-document.getElementById('hamburger').addEventListener('click', function () {
-    document.querySelector('.overlay').classList.toggle('active');
+document.getElementById('hamburger').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
 });
