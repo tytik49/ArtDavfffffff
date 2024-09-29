@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.getElementById('hamburger');
-    const nav = document.getElementById('nav');
+  const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('nav');
 
-    // Обработчик события для открытия/закрытия меню
-    hamburger.addEventListener('click', function () {
-        nav.classList.toggle('show');
-    });
+hamburger.addEventListener('click', () => {
+    nav.classList.toggle('active'); // Переключаем класс для отображения меню
 });
