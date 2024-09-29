@@ -1,8 +1,9 @@
-// Получаем элементы
-const hamburger = document.getElementById("hamburger");
-const nav = document.getElementById("nav");
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
 
-// Добавляем обработчик события клика на гамбургер
-hamburger.addEventListener("click", () => {
-    nav.classList.toggle("active");
+    // Обработчик события для открытия/закрытия меню
+    hamburger.addEventListener('click', function () {
+        nav.classList.toggle('show');
+    });
 });
